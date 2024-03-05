@@ -8,13 +8,13 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class H2ConnectionFactory implements ConnectionFactory {
-    private static H2ConnectionFactory instance;
+    public static H2ConnectionFactory instance;
     private String jdbcDriver;
     private String dbUrl;
     private String user;
     private String password;
 
-    private H2ConnectionFactory() {
+    public H2ConnectionFactory() {
         ResourceBundle rb = ResourceBundle.getBundle("database");
         jdbcDriver = rb.getString("jdbc_driver");
         dbUrl = rb.getString("db_url");
