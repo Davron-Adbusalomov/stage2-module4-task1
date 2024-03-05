@@ -15,7 +15,7 @@ public class H2ConnectionFactory implements ConnectionFactory {
     private String password;
 
     public H2ConnectionFactory() {
-        ResourceBundle rb = ResourceBundle.getBundle("database");
+        ResourceBundle rb = ResourceBundle.getBundle("h2database");
         jdbcDriver = rb.getString("jdbc_driver");
         dbUrl = rb.getString("db_url");
         user = rb.getString("user");
